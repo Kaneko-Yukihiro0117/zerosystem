@@ -1,0 +1,43 @@
+<div class="plan">みんなの旅行のスケジュール表</div>
+<div class="plans">
+  
+  <div class="brother">
+    <% if user_signed_in? %>
+        <%= link_to '日記をかく', new_blog_path %>
+      <% end %>
+    <%= month_calendar events: @blogs do |date, blogs| %>
+      <%= date.day %>
+      <% blogs.each do |blog| %>
+      <div>
+        <%= link_to blog.title, blog %>
+      </div>
+        <% end %>
+    <% end %>
+  </div>
+
+  <div class="sister">
+    <table>
+    <thead>
+      <tr>
+        <th class="sis_title">予定</th>
+        <th colspan="20"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @blogs.each do |blog| %>
+        <tr>
+        <td><%= blog.title %></td>
+        <td><%= link_to '<Show>', blog %></td>
+          <% if user_signed_in? && current_user.id == blog.user_id %>
+        <td><%= link_to '(Edit)', edit_blog_path(blog.id) %></td>
+        <td><%= link_to '[Destroy]',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+  </div>
+  <div class="sonson">
+    <%= link_to '>>topへ戻る', root_path %>
+  </div>
+</div>

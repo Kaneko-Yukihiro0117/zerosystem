@@ -1,0 +1,10 @@
+
+<%= form_with(model: [@room,@comment]) do |f| %>  
+<%= f.text_field :text, class:"text_comment"%>
+<%= f.submit '送信' %>
+<% end %>
+  <div id='comments'>
+     <% @comments.reverse_each do |comment| %>
+    <p><%= comment.text %></p>
+     <% end %>
+  </div>

@@ -1,0 +1,54 @@
+<header class="container-fluid mb-3 mb-md-0">
+
+<!----スタイルシート---->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:500" rel="stylesheet">
+
+  <div class="d-md-flex">
+    <div class="top-stitch">
+      <p class="mb-0">ゆきやこんこん</p>
+      <p class="mb-0">管理者：ゆきだるま</p>
+    </div>
+
+    <div class="greeting">
+    <% unless user_signed_in? && current_user.id %>
+        <%= "いらっしゃいませ、ログインまたは新規登録からお願いします。" %> 
+    <% else %>
+        <%= "ようこそ、"%><%= link_to current_user.nickname + "さん" , user_path(current_user) %>
+     <% end %>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-white pr-0">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="user_nav" id="navbar-header">
+          <span>ホーム
+          <ul class="user_info">
+              <li>
+                <% unless user_signed_in? && current_user.id %>
+                <%= link_to "新規登録", new_user_registration_path, class:"user_navi"%>
+                <%= link_to "サインイン", new_user_session_path, class:"user_navi"%>
+
+                <% else %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+                <% end %>
+              </li>
+          </ul>
+          </span>
+          <span>
+          <%= link_to "チャットへ", new_comment_path, class:"user_nav"%>
+          </span>
+          <span>
+          <%= link_to "予定管理表", blogs_path, class:"user_nav"%>
+          </span>
+          <span>
+          <%= link_to "日記", shops_path, class:"user_nav"%>
+          </span>
+          <span>
+          <%= link_to "買い物", "https://furima-32413-32413.herokuapp.com", class:"user_nav"%>
+          </span>
+        </div>
+    </div>
+  </nav>
+</header>
