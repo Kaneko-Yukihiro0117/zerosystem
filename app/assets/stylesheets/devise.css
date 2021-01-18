@@ -1,0 +1,349 @@
+.crip-box-main {
+  padding: 1.6em;/*内側の余白*/
+}
+.crip-box-in {/*内側*/
+    box-shadow: 0 0 2px 1px rgba(42,42,42,.05);/*影*/
+    padding-top: 2.8em;/*内側上の余白*/
+    margin-bottom: 0;/*外側下の余白を0*/
+    text-align: center;/*中央寄せ*/
+    position: relative;/*基準*/
+}
+.crip-box-in:before, .crip-box-in:after {/*クリップ部分の共通設定*/
+    content: "";/*文字の要素は無いのでこのまま*/
+    display: inline-block;/*幅と高さを設定できるように*/
+    position: absolute;/*基準を元に移動できるように*/
+}
+.crip-box-in:before {/*クリップ部分（１）*/
+    width: 72px;/*幅*/
+    height: 30px;/*高さ*/
+    border: 4px solid rgb(247, 191, 219);/*線*/
+    top: -8px;/*上からの位置*/
+    left: calc(50% - 40px);/*左からの位置を真ん中にする*/
+}
+.crip-box-in:after {/*クリップ部分（２）*/
+    width: 100px;/*幅*/
+    height: 28px;/*高さ*/
+    border-radius: 4px;/*角丸*/
+    background: #ee7f8f;/*背景色*/
+    top: -10px;/*上からの位置*/
+    left: calc(50% - 50px);/*左からの位置を真ん中にする*/
+}
+.new-title {/*タイトル部分*/
+    background: linear-gradient(transparent 60%, #fef7b7 60%, #fef7b7 90%, transparent 90%);/*黄色の下線*/
+    margin-bottom: 0;/*外側下の余白0.*/
+    display: inline-block;/*幅と高さを設定できるように*/
+}
+.form-text-wrap {/*テキスト部分*/
+    text-align: center;/*中央寄せ*/
+    margin-bottom: 0;/*外側下の余白0*/
+    padding: 1.2em;/*内側の余白（上下左右）*/
+}
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: initial;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-group:first-child {
+  padding: 0;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.info-text {
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.form-info-text {
+  font-size: 15px;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+.indispens {
+  color: blue;
+  font-size: 15px;
+  padding: 2.5px;
+  border: #f70841 1px solid;
+}
+
+.hane {
+  position: absolute;
+      right: 0;
+      bottom: 0;
+}
+.wa-pro {
+  color: #F4A460;
+  position: absolute;
+      right: 10px;
+      bottom: 0;
+}
+.tophe {
+  color: red;
+  position: absolute;
+      left: 0;
+      bottom: 0;
+}
+.register-orange-btn {
+background-color: orange;
+padding:12px 40px;
+position:relative;/*:activeのために基準値を設ける*/
+text-decoration:none;
+color:#fff;
+box-shadow:0px 6px 0px darkgoldenrod;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+}
+.register-orange-btn a:hover {color:#c30b37;
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+  background-color:#f70841;
+  box-shadow:inset 0px -1px 0px #c30b37;
+  top:7px;
+  }
+.session-main {
+  background-image: url("/images/bliss_1_m.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  text-align: center;
+}
+.session-header-text {
+padding-top: 50px;
+color: black;
+}
+.session-form-text {
+color: black;
+}
+.input-session-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.login-btn {
+  margin-top: 30px;
+}
+.login-red-btn {
+  background: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 37px;
+  color: #f73a3a;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+}
+.login-red-btn:active {
+  top: 4px;
+  text-shadow: none;
+}
+
+.field {
+  background: #C2E5FC; 
+}
+.notebook {
+  background: #fff;
+  padding: 1em 2em;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.7);
+  text-align: center;
+}
+.table{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 50%,
+      #ffff 50%,
+      #ffff 50%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 97%,
+      #999 97%,
+      #999 100%
+    );
+  background-size:
+    8px 100%,
+    100% 2em;
+  line-height:2;
+  margin-bottom:2em;
+  display: inline-block;
+  align-items: center;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #686565;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  background: #fafafa;
+  border: 1px solid #686565;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.comeback {
+  color: #686565;
+  position: absolute;
+  right: 10px;
+}
+  /* END */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+メディアクエリ
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* 中デバイス（タブレット, 992px 未満）
+============================================== */
+@media screen and (max-width: 991.98px) {
+
+  .crip-box-main {
+  height: 100%;
+  }
+  .session-main {
+    height: 100%;
+  }
+  .field {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* END */
+
+/* 小デバイス（横向きモバイル, 768px 未満）
+============================================== */
+@media screen and (max-width: 767.98px) {
+
+  .crip-box-main {
+    height: 100%;
+  }
+  .session-main {
+    height: 100%;
+  }
+  .field {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* END */
+
+/* 極小デバイス（縦向きモバイル, 576px 未満）
+	============================================== */
+  @media screen and (max-width: 575.98px) {
+
+  .crip-box-main {
+    height: 100%;
+ }
+ .session-main {
+  height: 100%;
+}
+.field {
+  height: 100%;
+  width: 100%;
+}
+  }
+
+  /* END */

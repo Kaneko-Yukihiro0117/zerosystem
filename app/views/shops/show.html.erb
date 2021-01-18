@@ -1,0 +1,47 @@
+  <!--p id="notice"><%= notice %></p-->
+<div class="item-show">
+  <div class="menus">商品の紹介</div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+        <th class="detail-item">商品の画像</th>
+        <td class='item-img-content'><%= image_tag @shop.image,class:"item-box-img" %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品の紹介者</th>
+          <td class="detail-value"><%= @shop.user.nickname + "様" %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @shop.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品の名前</th>
+          <td class="detail-value"><%= @shop.item_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">店の名前</th>
+          <td class="detail-value"><%= @shop.store_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">座標（緯度）</th>
+          <td class="detail-value"><%= @shop.latitude %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">座標（経度）</th>
+          <td class="detail-value"><%= @shop.longitude %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品の説明や感想</th>
+          <td class="detail-value"><%= @shop.detail %></td>
+        </tr>
+       </tbody>
+    </table>
+</div>
+
+    <br>
+    <% if user_signed_in? && current_user.id == @shop.user.id %>
+    <%= link_to '編集ページへ', edit_shop_path(@shop) %> /
+    <% end %>
+    <%= link_to '日記ページのトップへ', shops_path %>
+    <%= link_to ">>トップ画面に戻る", root_path, class:"comeback" %>

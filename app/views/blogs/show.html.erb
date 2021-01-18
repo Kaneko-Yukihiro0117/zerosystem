@@ -1,0 +1,28 @@
+<div class="letter">
+    <section>
+        <%= link_to image_tag("/images/fish.png", class:"stamp"), root_path %>
+        <time>2021.01.22</time>
+        <div class="penpen">ticket</div>
+    <p>
+      <strong>タイトル</strong>
+      <%= @blog.title %>
+    </p>
+
+    <p>
+      <strong>時間</strong>
+      <%= @blog.start_time.strftime("%Y-%m-%d %H:%M") %>
+    </p>
+
+    <p>
+      <strong>内容</strong>
+      <%= @blog.plan %>
+    </p>
+
+      <% if user_signed_in? && current_user.id == @blog.user_id %>
+      <%= link_to 'Edit', edit_blog_path(@blog) %> |
+      <%= link_to 'Destroy',blog_path(@blog.id), method: :delete, data: { confirm: 'Are you sure?' } %>｜
+      <% end %>
+
+      <%= link_to 'Back', blogs_path %>
+    </section>
+</div>

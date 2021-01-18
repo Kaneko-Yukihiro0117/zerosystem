@@ -1,0 +1,159 @@
+.simple-calendar {
+  .wday-0 {
+    background-color: pink;
+  }
+  .wday-1 {
+    background-color: white;
+
+  }
+  .wday-2 {
+    background-color: white;
+
+  }
+  .wday-3 {
+    background-color: white;
+
+  }
+  .wday-4 {
+    background-color: white;
+  }
+  .wday-5 {
+    background-color: white;
+  }
+  .wday-6 {
+    background-color: paleturquoise;
+  }
+
+  .today {
+    background-color: palegoldenrod;
+  }
+  .start-date {
+    font-size: 15px;
+  }
+  /*
+  .past {}
+  .future {}
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+*/
+  .has-events {
+    color: red;
+  }
+  .month {
+    font-size: 18px;
+  } 
+  .table-striped {
+    background-color: lightgoldenrodyellow;
+  }
+}
+.letter {
+  position: relative;
+  padding: 14px;
+  width: 480px;
+  background: -webkit-repeating-linear-gradient(135deg, #d43 0px, #d43 20px, #fec 20px, #fec 40px, #226 40px, #226 60px, #fec 60px, #fec 80px);
+  background: repeating-linear-gradient(135deg, #d43 0px, #d43 20px, #fec 20px, #fec 40px, #226 40px, #226 60px, #fec 60px, #fec 80px);
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+.letter section{
+  padding: 20px;
+  background: #fec;
+  color: #430;
+  font-size:14px;
+} 
+.penpen{
+  margin: 0;
+}
+.penpen {
+  margin: 0;
+  color: #430;
+  font-size: 19px;
+}
+.letter section p{
+  margin: 16px 0 0;
+  line-height: 1.61;
+}
+.letter section p {
+  display: block;
+  margin: 6px 0 0;
+  color: #27c;
+}
+.letter .stamp{
+  float: right;
+  margin:0 0 20px 20px;
+  padding: 10px;
+  height: 120px;
+  background: #fff;
+  background: radial-gradient(at center, transparent, transparent 5px, #fff 6px);
+  background: -webkit-gradient(radial, center center, 5, center center, 6, from(#fff), color-stop(100%,#fff), color-stop(0%,rgba(255,255,255,0)));
+  background-position: -10px -10px;
+  background-size: 20px 20px;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+}
+.letter time{
+  position: absolute;
+  top: 140px;
+  right: 6px;
+  display: inline-block;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: 5px double #430;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #430;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Bree Serif', serif;
+  line-height: 100px;
+  -webkit-transform: rotate(-16deg);
+  -ms-transform: rotate(-16deg);
+  transform: rotate(-16deg);
+}
+.letter time:before{
+  position: absolute;
+  top: 14%;
+  display: block;
+  padding: 0 0 8px;
+  width: 82%;
+  border-bottom:1px solid #430;
+  content: 'Posted at 11:00';
+  font-size: 16px;
+  line-height: 1;
+}
+.letter time:after{
+  position: absolute;
+  bottom: 16%;
+  display: block;
+  padding: 6px 0 0;
+  width: 82%;
+  border-top: 1px solid #430;
+  content: 'from NANBA';
+  font-size: 13px;
+  line-height: 1;
+}
+.planed {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.planed input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 80%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: none;
+	border-bottom: 2px solid #1b2538;
+	background: transparent;
+}
+.label input[type='text']:focus {
+	border-bottom: 2px solid #da3c41;
+	outline: none;
+}

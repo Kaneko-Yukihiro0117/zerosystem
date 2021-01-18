@@ -1,0 +1,116 @@
+.plan {
+  color: salmon;
+  text-align: center;
+  font-size: 30px;
+}
+.plans {
+display: flex;
+width: 100%;
+background-color: lightsalmon;
+}
+
+.brother {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  left: 20px;
+  font-size: 25px;
+}
+
+.sister {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+.sis_title {
+  color: navy;
+  font-size: 20px;
+}
+#tbody {
+  overflow: scroll;
+}
+.sonson {
+  position: absolute;
+      right: 0;
+      bottom: 0;
+}
+.yotei {
+  background: linear-gradient(#ccc, #fff);
+  font: 14px sans-serif;
+  padding: 20px;
+}
+.yoteied {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.yoteied:before, .yoteied:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.yoteied:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.yoteied:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+.register-burlywood-btn {
+  background-color: burlywood;
+  padding:12px 40px;
+  position:relative;/*:activeのために基準値を設ける*/
+  text-decoration:none;
+  color:#fff;
+  box-shadow:0px 6px 0px darkgoldenrod;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  }
+  .register-burlywood-btn a:hover {color:#c30b37;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+    background-color:#f70841;
+    box-shadow:inset 0px -1px 0px #c30b37;
+    top:7px;
+    }
+  .register-skyblue-btn {
+      background-color: skyblue;
+      padding:12px 40px;
+      position:relative;/*:activeのために基準値を設ける*/
+      text-decoration:none;
+      color:#fff;
+      box-shadow:0px 6px 0px darkgoldenrod;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .register-skyblue-btn a:hover {color:#c30b37;
+        text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+        background-color:#f70841;
+        box-shadow:inset 0px -1px 0px #c30b37;
+        top:7px;
+     }
+.register-btn {
+  justify-content: center;
+}
+.diary {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

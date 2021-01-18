@@ -1,0 +1,32 @@
+<div class="field">
+<div class="notebook">
+<h2 class="note_wrap">
+        <%= @user.nickname + "さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">メールアドレス</th>
+            <td class="table__col2"><%= @user.email %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">生年月日（年-月-日)</th>
+            <td class="table__col2"><%= @user.birthday %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">氏名（漢字）</th>
+            <td class="table__col2"><%= @user.first_name_kanji %><%= @user.last_name_kanji %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">氏名（読み仮名）</th>
+            <td class="table__col2"><%= @user.first_name_kana %><%= @user.last_name_kana %></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <%= link_to ">>トップに戻る", root_path, class:"comeback" %>
+</div>

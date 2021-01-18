@@ -1,0 +1,55 @@
+<div class="loose-leaf"> 
+  <div class="new_shop">お店の新しい紹介投稿ページ</div>
+  <div class="loose_leafed">
+    <div class="maped">
+      <%= render 'map',shop: @shop %>
+    </div>
+    <div class="formed">
+
+      <%= form_with model: @shop, url: shop_path, method: :PUT, class: 'newshopping', local: true do |f| %>
+
+    <div class="click-upload">
+        <p>
+          ※「ファイルを選択」をクリックして画像ファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"shop-image" %>
+    </div>
+  <br>
+    <div class="textfield">
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+  <br>
+    <div class="textfield">
+      <%= f.text_field :item_name, placeholder: "商品名", class:"textboxed" %>
+    </div>
+  <br>
+    <div class="textfield">
+      <%= f.text_field :store_name, placeholder: "店の名前", class:"textboxed" %>
+    </div>
+  <br>
+    <div class="textfield">
+      <%= f.text_field :latitude, placeholder: "緯度（検索した時の左の数値）", class:"textboxed" %>
+    </div>
+  <br>
+    <div class="textfield">
+      <%= f.text_field :longitude, placeholder: "経度（検索した時の右の数値）", class:"textboxed" %>
+    </div>
+      <%= "座標は左にあるGoogle Mapを活用してください。"%>
+  <br>
+    <div class="textfield">
+       <%= f.text_area :detail, placeholder: "商品の説明や感想", class:"textformed" %>
+    </div>    
+   <br>
+    <div class="btn">
+      <%= f.submit "更新",class:"btn" %>
+    </div>
+    <% end %>
+    </div>
+    <div class="imaged">
+    <%= link_to image_tag("/images/tamagosu-puillust1.png", class:"cooked"), root_path %>
+    </div>
+  </div>
+
+<%= link_to '日記ページの詳細ページへ', shop_path(@shop) %> /
+<%= link_to '日記ページのトップへ', shops_path %>
+<%= link_to ">>トップ画面に戻る", root_path, class:"comeback" %>

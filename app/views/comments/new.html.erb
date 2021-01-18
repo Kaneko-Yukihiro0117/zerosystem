@@ -1,0 +1,25 @@
+<div class="cherry-blossom-container">
+<meta charset="UTF-8">
+  <div class="huda">大阪梅田町掲示板</div> 
+    <div class="all_area">
+      <div class="user_area">
+          <div class="user_room">
+            <p>現在のログインユーザー</p><br>
+            <% User.where(id: current_user.id).each do |user|  %>
+            <p><%= user.nickname %><p>
+            <% end %>
+          </div>
+       </div>
+        <div class="chat">
+          <%= render partial: 'new' %>
+        </div> 
+        <div class="harigami">
+          <div class="kami">広告
+          </div>
+          <div class="kami">広告
+          </div>
+          <div class="kami">広告
+          </div>
+        </div>
+    </div>
+</div>

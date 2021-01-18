@@ -1,0 +1,31 @@
+<div class="sky">
+  <!--p id="notice"><%= notice %></p-->
+  <div class="kiroku">旅の美味しいもの記録コーナー</div>
+  <% if user_signed_in? %>
+<p><%= link_to '＜新規投稿ページ＞', new_shop_path %></p>
+  <% end %>
+    <div class="father">
+      <div class="mother">
+      <%= render 'map',shop: @shop %>
+        <%= link_to "topへ", root_path, class:"tophe" %>
+        <%= link_to image_tag("/images/rabbit.png", class:"rabbit"), root_path%>
+      </div>
+
+      <div class="child">
+          <td><%= "＜カテゴリー・商品の名前・店の名前の順番に表示されます。＞"%>
+        <% @shops.each do |shop| %>
+        <li class="lists">
+          <%= link_to shop_path(shop.id) do %>
+          <td><%= shop.category.name %></td>
+          <td><%= shop.item_name %></td>
+          <td><%= shop.store_name %></td>
+          <% if user_signed_in? && current_user.id == shop.user_id %>
+          <td><%= link_to '編集', edit_shop_path(shop.id) %></td>
+          <td><%= link_to '削除', shop, method: :DELETE, data: { confirm: "削除しても大丈夫？" } %></td>
+          <% end %>
+          <% end %>
+       </li>
+        <% end %>
+      </div>
+    </div>
+</div>

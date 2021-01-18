@@ -1,0 +1,53 @@
+        <input id="address" type="textbox" value="" class="zahyou">
+        <input type="button" value="検索" onclick="codeAddress()" class="btn-square-above-look">
+        <div id="display">＜＜座標表示欄＞＞
+          <br><%= "※ 座標が表示されない時は一度更新してください。"%> 
+        </div>
+        <div id='map'></div>
+         <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
+
+         <!-------GoogleMap表示・内部設定-------------->
+<script>
+let map
+let geocoder
+const display = document.getElementById('display')
+
+function initMap(){
+  geocoder = new google.maps.Geocoder()
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 34.6649869, lng:135.5036556},
+    zoom: 12,
+  });
+
+  marker = new google.maps.Marker({
+    position:  {lat: 34.6649869, lng:135.5036556},
+    map: map
+  });
+}
+// 大きさの設定だけCSSで設定しています。
+//latが緯度、lngが経度を示します
+//zoomの数値は0〜21まで指定できます。数値が大きいほど拡大されます
+//positionに指定した座標にピンを表示させます
+
+function codeAddress(){
+  let inputAddress = document.getElementById('address').value;
+
+  geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+    if (status == 'OK') {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+      display.textContent = "検索結果：" + results[ 0 ].geometry.location
+    } else {
+      alert('該当する結果がありませんでした：' + status);
+    }
+  });   
+}
+//inputAddressで検索フォームの入力内容を取得
+//if文から該当する検索結果がヒットした時に、地図の中心を検索結果の緯度経度に更新する
+//もし、検索結果がなかった場合、alertへ移行する
+</script>
+<!------------------------------------------>

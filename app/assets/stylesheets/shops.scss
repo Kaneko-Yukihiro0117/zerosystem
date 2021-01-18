@@ -1,0 +1,181 @@
+/* 1. 雲が浮かぶ空を作成 */
+
+.sky {
+  animation: cloud 120s linear infinite;
+  background-image: url("/images/3aec3.png"),
+    linear-gradient(#bbe4fa, hsl(171, 40%, 91%));
+  background-position-x: 0%;
+  background-position-y: 35%;
+  background-repeat: repeat-x;
+  background-size: cover;
+  height: 750px;
+}
+
+/* 2. keyframeを使って、雲が流れるように。 */
+@keyframes cloud {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 800px;
+  }
+}
+.kiroku {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+.zahyou {
+  width: 250px;
+  font-style: unset;
+}
+
+#map {
+  height: 300px;
+  width: 360px;
+  margin: auto 0;
+}
+  .btn-square-above-look {
+    display: inline-block;
+    position: relative;
+    padding: 0.35em 1em;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    text-decoration: none;
+  }
+  
+  .btn-square-above-look:before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: -webkit-calc(100% - 16px);
+    width: calc(100% - 16px);
+    height: 0;
+    border: solid 8px transparent;
+    border-bottom-color: #8eacec;/*ボタン色より明るめの色に*/
+  }
+  
+  .btn-square-above-look:active {
+    /*押したとき*/
+    padding: 0.32em 0.9em;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  
+  .btn-square-above-look:active:before { 
+    width: -webkit-calc(100% - 12px);
+    width: calc(100% - 12px);
+  }
+  
+  .btn-square-above-look:active:before {
+    top:-12px;
+    border-width: 6px;
+  }
+
+.father{
+  display: flex;
+}
+
+.mother {
+  width: 420px;
+  background-color: transparent;/*背景を透明*/
+  text-align: center;
+  border-radius: 4%;
+  padding: 120px 30px 15px 15px;
+}
+.rabbit {
+  height: 100px;
+  width: 100px;
+}
+
+.child {
+  list-style: decimal;
+}
+.lists {
+  padding: 0 10px;
+}
+.setumei {
+  padding: 100px;
+  font-size: 30px;
+}
+
+.loose-leaf{
+  background: #f8f0d7;
+  border-left: 5px dotted rgba(0,0,0,.1);
+  box-shadow: 0 0 0 5 #f8f0d7;
+  padding: 1em;
+  margin: 1em 5px;
+  width: 100%;
+}
+
+.loose-leaf 
+.new_shop {
+  margin: 0;
+  padding: 0;
+}
+
+.new_shop {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.loose_leafed {
+  display: flex;
+}
+.maped {
+  padding-top: 30px;
+}
+.formed {
+  padding-left: 10px;
+}
+.textboxed {
+ width: 200px;
+ height: 30px;
+}
+.textformed {
+  width: 350px;
+  height: 50px;
+}
+.imaged {
+  padding: 250px 0 0 30px;
+}
+.cooked {
+  height: 250px;
+  }
+  .item-show {
+    background-color: #f8f8f8;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 0;
+  }
+  .detail-table {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .menus {
+    font-size: 30px;
+  }
+  .detail-item {
+    width: 20%;
+    color: #fff;
+    background-color: lightgreen;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    text-align: center;
+  }
+  .item-box-img {
+    height: 50vh;
+    width: 60vw;
+    min-height: 500px;
+    background-color: rgb(205, 202, 202);
+    object-fit: contain;
+  }
+  .detail-value {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+  }
