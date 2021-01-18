@@ -8,7 +8,7 @@
 
  # URL 
  
- ＜デプロイ済みのURLを記述しましょう。デプロイが済んでいない場合は、デプロイ次第記述しましょう。＞
+ https://zerosystem-32413.herokuapp.com/
  
  # テスト用アカウント 
 
@@ -62,7 +62,7 @@ Basic認証 :ID       :admin
  
  	HTML・CSS・Ruby・Ruby on Rails・JavaScript・SQL・Git・ GitHub 等の技術を用いたアプリケーション開発
 
-# データベース設計 ER図 ＜  ＞
+# データベース設計 ER図 https://github.com/Kaneko-Yukihiro0117/zerosystem/blob/master/original.png
 
  ## users テーブル
 
