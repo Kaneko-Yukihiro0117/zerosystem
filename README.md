@@ -19,9 +19,6 @@
  ユーザーアカウント ID 2 いいいい
  メールアドレス: hata@yahoo.co.jp
  password : 2q2q2q2
- 
-Basic認証 :ID       :admin
-          password :2222
 
  # 利用方法	
  
